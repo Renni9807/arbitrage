@@ -14,18 +14,41 @@ Below is a step-by-step guide to set up the entire system, plus deeper explanati
 
 ---
 
-### Technology Stack & Tools
+# Technology Stack & Tools
 
-- **Solidity** (Smart Contract)
-- **Javascript** (Node.js for Bot & Express)
-- **Hardhat** (Development Framework for Solidity)
-- **Ethers.js** (Blockchain interaction)
-- **[Alchemy](https://www.alchemy.com/)** (Blockchain connection)
-- **Balancer** (Flash Loan Provider)
-- **Uniswap V3** (DEX for token swaps)
-- **Pancakeswap V3** (Another DEX for token swaps)
-- **Express.js** (Server to store swap logs)
-- **Streamlit** (Python-based UI for data visualization)
+- **Solidity (Smart Contract)**
+  - Core language for writing the `Arbitrage.sol` and other smart contracts.
+
+- **Javascript (Node.js for Bot & Express)**
+  - Executes the bot logic (`bot.js`) to listen to on-chain events and handle off-chain processes (logging swaps, orchestrating trades, etc.).
+
+- **Hardhat (Development Framework for Solidity)**
+  - Compilation, deployment (including local or mainnet fork), and testing environment for all smart contracts.
+
+- **Ethers.js (Blockchain interaction)**
+  - Integrates with Ethereum-compatible chains. Utilizes [**ABIs**](https://docs.ethers.org/v5/single-page/#/v5/api/utils/abi/) from Uniswap/Pancakeswap contracts and a custom ABI for Pancakeswap V3’s unique event signatures, so we can decode swap events and interact with on-chain functions.
+
+- **WebSocket (WSS) Endpoints**
+  - Uses [WebSocketProviders](https://docs.ethers.org/v5/single-page/#/v5/api/providers/types/) in Ethers.js to subscribe in real-time to `Swap` events, ensuring near-instantaneous detection of arbitrage opportunities.
+
+- **Alchemy (Blockchain connection)**
+  - Provides high-reliability RPC/WebSocket endpoints for mainnet or testnet networks, facilitating stable on-chain data feeds.
+
+- **Balancer (Flash Loan Provider)**
+  - The `Arbitrage.sol` contract demonstrates flash loan capabilities from Balancer, used to borrow assets and execute multi-swap arbitrage.
+
+- **Uniswap V3 (DEX for token swaps)**
+  - Primary DEX for one side of the arbitrage route. We listen to the `Swap` events and track real-time price changes via its official `IUniswapV3Pool` ABI.
+
+- **Pancakeswap V3 (Another DEX for token swaps)**
+  - Serves as the secondary DEX in the arbitrage route, also emitting `Swap` events. Includes a **custom** ABI for Pancakeswap V3’s slightly different event signature.
+
+- **Express.js (Server to store swap logs)**
+  - Hosts the `/api/trade-logs` endpoint that receives and stores real-time swap data from the bot in memory.
+
+- **Streamlit (Python-based UI for data visualization)**
+  - Fetches the logs from the Express server, converts `sqrtPriceX96` to a human-readable format, and plots real-time token price trends in a browser dashboard.
+
 
 ---
 
