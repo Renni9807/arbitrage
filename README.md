@@ -218,6 +218,8 @@ Network congestion impact
 Cross-pool dependency risks
 Market volatility impacts
 
+Few steps in trading demo
+
 <img width="355" alt="After_add_rpc_through_arbitrum_docs_custom_network_configured" src="https://github.com/user-attachments/assets/6ad49710-d3a5-43a2-a995-c174e5e9ec6f" />
 
 <img width="501" alt="bridge_from_sepolia_to_arbitrumSepolia" src="https://github.com/user-attachments/assets/baaa5c99-c29d-4684-a1c5-4ad60c7a7020" />
