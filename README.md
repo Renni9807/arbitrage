@@ -60,7 +60,9 @@ That's why visualizing these data points — for instance, sqrtPriceX96 over tim
 
 Even for a “simple” arbitrage, preventing losses is paramount, and good visualization helps confirm whether certain trades are truly profitable, or if the net outcome over time remains positive. If you expand to perpetual DEXes or delta-one products, algorithmic approaches and chart-based analytics can become even more crucial
 
-<img width="600" alt="swap_trend_data" src="https://github.com/user-attachments/assets/e818f44a-871c-47ea-83f9-1af819cad88f" />
+<img width="600" alt="streamlit_swap_price_trend" src="https://github.com/user-attachments/assets/d14a4147-2d7a-4b8b-a784-72412ad86f82" />
+
+<img width="600" alt="streamlit_swap_price_tend2" src="https://github.com/user-attachments/assets/1b64e2b2-486b-4247-91ad-9d9b57944d90" />
 
 My analysis 
 
