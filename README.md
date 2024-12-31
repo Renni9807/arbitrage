@@ -60,11 +60,11 @@ That's why visualizing these data points — for instance, sqrtPriceX96 over tim
 
 Even for a “simple” arbitrage, preventing losses is paramount, and good visualization helps confirm whether certain trades are truly profitable, or if the net outcome over time remains positive. If you expand to perpetual DEXes or delta-one products, algorithmic approaches and chart-based analytics can become even more crucial
 
+MY analysis 
+
 <img width="600" alt="streamlit_swap_price_trend" src="https://github.com/user-attachments/assets/d14a4147-2d7a-4b8b-a784-72412ad86f82" />
 
 <img width="600" alt="streamlit_swap_price_tend2" src="https://github.com/user-attachments/assets/1b64e2b2-486b-4247-91ad-9d9b57944d90" />
-
-My analysis 
 
 <img width="600" alt="streamlit_usingTWAP" src="https://github.com/user-attachments/assets/52f945d7-9c5f-48e7-8df8-1635cca28130" />
 
@@ -75,6 +75,10 @@ Uniswap chart
 <img width="600" alt="uniswapchart_price" src="https://github.com/user-attachments/assets/9ec5b55d-a359-4730-b136-d698527da23f" />
 
 <img width="600" alt="uniswapchart_volume24:7" src="https://github.com/user-attachments/assets/27fb9afc-b498-4766-98ec-e71db1064108" />
+
+CoinGecKo eth/arb
+
+<img width="600" alt="coingecko_arb:eth_price" src="https://github.com/user-attachments/assets/6af1691d-72e4-4b3a-95f5-0eb0dc575e0c" />
 
 
 ### Setting Up
