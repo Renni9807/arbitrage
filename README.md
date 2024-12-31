@@ -175,6 +175,49 @@ If your price in Streamlit is still “too big or small,” check the token deci
 If you want persistent logs beyond server restarts, modify server.js to write to swap_logs.json or a DB.
 For repeated testing, you might need to restart your Hardhat node, redeploy the contract, and rerun bot.js.
 
+Risk Management
+Gas Optimization
+
+This project uses Arbitrum for lower gas costs compared to Ethereum mainnet
+Gas optimization techniques:
+
+Monitor and analyze Uniswap V3 and Pancakeswap V3 tick-specific liquidity
+Borrow amount can be optimized based on available liquidity in specific price ticks
+Minimize tick crossing to reduce gas costs during swaps
+Use appropriate gas price strategy based on network conditions
+
+### Key Risk Factors
+
+# Slippage Management:
+
+Calculate and set appropriate slippage tolerances
+Monitor pool depth and liquidity concentration
+Consider impact of trade size on price impact
+
+
+# MEV Protection:
+
+Be aware of potential sandwich attacks
+Consider using private RPCs or protected mempool
+Implement appropriate delay mechanisms
+Monitor for unusual price movements or front-running patterns
+
+
+# Infrastructure Considerations:
+
+Use high-performance RPC providers
+Consider geographical location of nodes
+Implement proper failover mechanisms
+Monitor network latency and connection quality
+
+
+# Additional Risk Factors:
+
+Smart contract risks (flash loan implementations)
+Network congestion impact
+Cross-pool dependency risks
+Market volatility impacts
+
 <img width="355" alt="After_add_rpc_through_arbitrum_docs_custom_network_configured" src="https://github.com/user-attachments/assets/6ad49710-d3a5-43a2-a995-c174e5e9ec6f" />
 
 <img width="501" alt="bridge_from_sepolia_to_arbitrumSepolia" src="https://github.com/user-attachments/assets/baaa5c99-c29d-4684-a1c5-4ad60c7a7020" />
