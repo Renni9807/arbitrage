@@ -37,35 +37,6 @@ That's why visualizing these data points — for instance, sqrtPriceX96 over tim
 
 Even for a “simple” arbitrage, preventing losses is paramount, and good visualization helps confirm whether certain trades are truly profitable, or if the net outcome over time remains positive. If you expand to perpetual DEXes or delta-one products, algorithmic approaches and chart-based analytics can become even more crucial
 
-### Project Structure
-
-arbitrage/
-├─ README.md <-- This file (updated)
-├─ config.json <-- Contains addresses, fees, tokens, etc.
-├─ hardhat.config.js <-- Hardhat config for local/dev/test
-├─ contracts/ <-- Solidity (Arbitrage.sol)
-├─ artifacts/ <-- Compiled artifacts
-├─ helpers/
-│ ├─ abi.js <-- Uniswap/Pancakeswap Pool ABIs
-│ ├─ helpers.js <-- Shared functions (getPoolContract, etc.)
-│ └─ initialization.js <-- Sets up provider + uniswap/pancakeswap + arbitrage contract
-├─ server/
-│ ├─ server.js <-- Express server (port 5001)
-│ └─ bot.js <-- Node.js bot that listens to swaps, logs them, checks arb
-├─ python_app/
-│ ├─ fetch_data.py <-- GET logs from /api/trade-logs
-│ ├─ streamlit_app.py <-- Streamlit UI to visualize logs (charts)
-│ └─ main.py <-- CLI launcher for Streamlit
-├─ scripts/
-│ ├─ deploy.js <-- Hardhat script to deploy Arbitrage.sol
-│ └─ manipulate.js <-- Manipulate pool price (for local testing)
-├─ test/
-│ └─ Arbitrage.js <-- Example Mocha/Chai test
-├─ package.json
-├─ package-lock.json
-└─ ...
----
-
 ### Setting Up
 
 1. **Install Dependencies**
