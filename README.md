@@ -64,7 +64,6 @@ arbitrage/
 ├─ package.json
 ├─ package-lock.json
 └─ ...
-
 ---
 
 ### Setting Up
@@ -128,10 +127,6 @@ Streamlit calls fetch_swaps() → /api/trade-logs → displays price data from s
 
 ## If you want auto-refresh every X seconds, you can incorporate st.autorefresh logic in Streamlit.
 
-1초 동안 생각
-md
-코드 복사
-
 # Trading Bot & Streamlit Visualization
 
 ### Overview
@@ -161,17 +156,6 @@ Below is a step-by-step guide to set up the entire system, plus deeper explanati
 - **Express.js** (Server to store swap logs)
 - **Streamlit** (Python-based UI for data visualization)
 
----
-
-### Project Structure
-
-arbitrage/ ├─ README.md <-- This file (updated) ├─ config.json <-- Contains addresses, fees, tokens, etc. ├─ hardhat.config.js <-- Hardhat config for local/dev/test ├─ contracts/ <-- Solidity (Arbitrage.sol) ├─ artifacts/ <-- Compiled artifacts ├─ helpers/ │ ├─ abi.js <-- Uniswap/Pancakeswap Pool ABIs │ ├─ helpers.js <-- Shared functions (getPoolContract, etc.) │ └─ initialization.js <-- Sets up provider + uniswap/pancakeswap + arbitrage contract ├─ server/ │ ├─ server.js <-- Express server (port 5001) │ └─ bot.js <-- Node.js bot that listens to swaps, logs them, checks arb ├─ python_app/ │ ├─ fetch_data.py <-- GET logs from /api/trade-logs │ ├─ streamlit_app.py <-- Streamlit UI to visualize logs (charts) │ └─ main.py <-- CLI launcher for Streamlit ├─ scripts/ │ ├─ deploy.js <-- Hardhat script to deploy Arbitrage.sol │ └─ manipulate.js <-- Manipulate pool price (for local testing) ├─ test/ │ └─ Arbitrage.js <-- Example Mocha/Chai test ├─ package.json ├─ package-lock.json └─ ...
-
-yaml
-코드 복사
-
----
-
 ### Setting Up
 
 1. **Install Dependencies**
@@ -182,36 +166,26 @@ yaml
 
 Create & Setup .env In your root folder, create a .env file:
 
-bash
-코드 복사
 ALCHEMY_API_KEY="YourAlchemyKey"
 PRIVATE_KEY="0xyourPrivateKey"
 If using Hardhat fork mode or connecting to Arbitrum/Ethereum mainnet, ensure these values are correct.
 
 Hardhat Node (Optional) If you want local/fork testing:
 
-bash
-코드 복사
 npx hardhat node
 Then in another terminal:
 
-bash
-코드 복사
 npx hardhat run scripts/deploy.js --network localhost
 (Or if you’re connecting to arbitrum instead of localhost, see hardhat.config.js.)
 
 Start Express Server Open a new terminal:
 
-bash
-코드 복사
 cd server
 nodemon server.js
 The server listens on port 5001.
 Swap logs are stored in an in-memory array inside server.js by default.
 Start the Bot In another terminal:
 
-bash
-코드 복사
 cd server
 nodemon bot.js
 This bot does the following:
@@ -220,15 +194,11 @@ For each Swap, POST a JSON log to http://localhost:5001/api/trade-logs, includin
 Checks whether the price difference between two DEXes is above a threshold. If so, runs executeTrade() on the deployed Arbitrage.sol.
 (Optional) Manipulate Price For local or forked testing:
 
-bash
-코드 복사
 npx hardhat run scripts/manipulate.js --network localhost
 This uses an unlocked account to do swaps that shift the pool price artificially.
 
 Streamlit Visualization In a third terminal:
 
-bash
-코드 복사
 cd python_app
 python main.py streamlit
 By default, Streamlit starts on port 8501.
