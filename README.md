@@ -41,15 +41,15 @@ img width="900" alt="swap_trend_data" src="https://github.com/user-attachments/a
 
 My analysis 
 
-img width="900" alt="streamlit_usingTWAP" src="https://github.com/user-attachments/assets/52f945d7-9c5f-48e7-8df8-1635cca28130" />
+<img width="600" alt="streamlit_usingTWAP" src="https://github.com/user-attachments/assets/52f945d7-9c5f-48e7-8df8-1635cca28130" />
 
-img width="900" alt="streamlit_grap_correspondsto_uniswapdata" src="https://github.com/user-attachments/assets/8f7b6b69-e336-4f44-b940-75dea30542fb" />
+<img width="600" alt="streamlit_grap_correspondsto_uniswapdata" src="https://github.com/user-attachments/assets/8f7b6b69-e336-4f44-b940-75dea30542fb" />
 
 Uniswap chart
 
-img width="900" alt="uniswapchart_price" src="https://github.com/user-attachments/assets/9ec5b55d-a359-4730-b136-d698527da23f" />
+<img width="600" alt="uniswapchart_price" src="https://github.com/user-attachments/assets/9ec5b55d-a359-4730-b136-d698527da23f" />
 
-img width="900" alt="uniswapchart_volume24:7" src="https://github.com/user-attachments/assets/27fb9afc-b498-4766-98ec-e71db1064108" />
+<img width="600" alt="uniswapchart_volume24:7" src="https://github.com/user-attachments/assets/27fb9afc-b498-4766-98ec-e71db1064108" />
 
 
 ### Setting Up
@@ -220,11 +220,11 @@ Market volatility impacts
 
 Few steps in trading demo
 
-<img width="900" alt="After_add_rpc_through_arbitrum_docs_custom_network_configured" src="https://github.com/user-attachments/assets/6ad49710-d3a5-43a2-a995-c174e5e9ec6f" />
+<img width="600" alt="After_add_rpc_through_arbitrum_docs_custom_network_configured" src="https://github.com/user-attachments/assets/6ad49710-d3a5-43a2-a995-c174e5e9ec6f" />
 
-<img width="900" alt="bridge_from_sepolia_to_arbitrumSepolia" src="https://github.com/user-attachments/assets/baaa5c99-c29d-4684-a1c5-4ad60c7a7020" />
+<img width="600" alt="bridge_from_sepolia_to_arbitrumSepolia" src="https://github.com/user-attachments/assets/baaa5c99-c29d-4684-a1c5-4ad60c7a7020" />
 
-img width="900" alt="Listening_to_swap_event" src="https://github.com/user-attachments/assets/21cbf2ff-cd0e-44b0-aada-ae26bd3c03e2" />
+<img width="600" alt="Listening_to_swap_event" src="https://github.com/user-attachments/assets/21cbf2ff-cd0e-44b0-aada-ae26bd3c03e2" />
 
 
 
